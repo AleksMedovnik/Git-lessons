@@ -1,4 +1,34 @@
-git config --global user.name "<your name>"
-git config --global user.email "<your email>"
-git init
-git add .
+git commit
+a
+'Added что-то'
+esc
+:wq
+
+git tag first
+
+# отмена без add
+git restore file_1 file_2
+git restore .
+git checkout .
+
+# отмена после add
+git restore --staged .
+
+# отмена commit
+git revert HEAD
+a
+esc
+:wq
+
+git revert HEAD --no-edit
+
+git log
+
+# Удалить отмененный коммит из истории
+git reset --hard first
+
+git log --all
+
+rm -rf .git*
+
+git merge v1 --no-edit
