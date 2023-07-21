@@ -1,3 +1,6 @@
+rm -rf .git*
+
+
 git commit
 a
 'Added что-то'
@@ -28,7 +31,16 @@ git log
 git reset --hard first
 
 git log --all
+git log --graph
 
-rm -rf .git*
+git checkout -b v1
 
 git merge v1 --no-edit
+git rebase v2
+git rebase --continue
+ 
+# move & add file
+git mv script.js js
+
+git clone project_name project_clone_name
+git pull # получение данных из удаленного репозитория
