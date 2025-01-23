@@ -44,3 +44,14 @@ git mv script.js js
 
 git clone project_name project_clone_name
 git pull # получение данных из удаленного репозитория
+
+# Загрузить все ветки из GitLab
+git fetch --all
+
+# какие удалённые ветки есть
+git branch -r
+
+# Удалить все ветки, кроме master, на удалённом сервере (GitLab)
+for branch in $(git branch -r | grep -v 'origin/master' | sed 's/origin\///'); do
+  git push origin --delete $branch
+done
